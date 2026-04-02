@@ -1,0 +1,36 @@
+# 🔹 Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 🔹 Virtual environments
+venv/
+.venv/
+
+# 🔹 Dataset folders (VERY IMPORTANT - big size)
+datasets/
+archive/
+CelebA/
+LFW/
+WIDER_FACE/
+
+# 🔹 Model weights (large files)
+*.pt
+*.pth
+*.h5
+weights/
+
+# 🔹 Logs & temp files
+*.log
+*.tmp
+
+# 🔹 OS files
+.DS_Store
+Thumbs.db
+
+# 🔹 VS Code settings
+.vscode/
+
+# 🔹 Environment variables
+.env
