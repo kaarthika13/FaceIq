@@ -7,7 +7,7 @@ Unlike traditional systems that handle tasks separately, FaceIQ provides an end-
 
 Detecting faces
 Extracting attributes (age, gender, emotion)
-Generating deep embeddings
+Generating deep embedding
 Retrieving similar images
 Explaining predictions using Explainable AI
 
