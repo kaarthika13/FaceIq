@@ -1,124 +1,181 @@
-📸 FaceIQ – Explainable AI-Based Face Recognition & Image Retrieval System
-🚀 Overview
+# 📸 FaceIQ – Explainable AI-Based Face Recognition & Image Retrieval System
 
-FaceIQ is an advanced AI-powered system designed for facial characterization and semantic image retrieval using deep learning. It integrates multiple components such as face detection, attribute extraction, and similarity-based retrieval into a unified pipeline.
+## 🚀 Overview
 
-Unlike traditional systems that handle tasks separately, FaceIQ provides an end-to-end intelligent framework capable of:
+FaceIQ is an advanced AI-powered system designed for facial characterization and semantic image retrieval using deep learning.
 
-Detecting faces
-Extracting attributes (age, gender, emotion)
-Generating deep embedding
-Retrieving similar images
-Explaining predictions using Explainable AI
+Unlike traditional systems that perform isolated tasks, FaceIQ provides an end-to-end intelligent pipeline that integrates detection, analysis, retrieval, and explainability.
 
-📌 This project is based on our mini-project report:
-“Explainable Hybrid Deep Embedding Framework for Intelligent Facial Characterisation and Semantic Image Retrieval”
+### 💡 What it can do:
 
-✨ Key Features
-🔍 Face Detection using Faster R-CNN
-🧠 Multi-level Facial Characterization (Age, Gender, Emotion)
-🧬 Deep Feature Embeddings using ResNet
-🔎 Image Retrieval System using k-Nearest Neighbors (k-NN)
-📊 Explainable AI (Grad-CAM) for visualization
-⚡ Hybrid Pipeline Architecture for better accuracy and scalability
-🌐 Web-based Interface Support (Streamlit)
-🧠 System Architecture
+* Detect faces in images or live video
+* Extract facial attributes (age, gender, emotion)
+* Generate deep feature embeddings
+* Retrieve similar faces from a database
+* Explain predictions using Explainable AI (Grad-CAM)
 
-The system follows a multi-stage pipeline:
+---
 
-📥 Input Image / Webcam
-🧹 Image Preprocessing
-🔍 Face Detection (Faster R-CNN)
-✂️ Face Cropping
-🧠 Feature Extraction (ResNet)
-🧬 Deep Embedding Generation
-🔎 Similarity Matching (k-NN / Cosine Similarity)
-📊 Ranking of Results (Top-K images)
-🔥 Explainability (Grad-CAM Heatmaps)
-✅ Final Output
+## ✨ Key Features
 
-👉 The architecture diagram (Page 31) clearly shows this pipeline from input → embedding → retrieval → explainability.
+* 🔍 Face Detection using Faster R-CNN
+* 🧠 Multi-level Facial Characterization (Age, Gender, Emotion)
+* 🧬 Deep Feature Embeddings using ResNet
+* 🔎 Image Retrieval System using k-Nearest Neighbors (k-NN)
+* 📊 Explainable AI (Grad-CAM) for visualization
+* ⚡ Hybrid Deep Learning Pipeline
+* 🌐 Web Interface Support (Streamlit)
 
-🛠️ Tech Stack
-💻 Programming
-Python
-📚 Libraries & Frameworks
-OpenCV
-NumPy
-TensorFlow / PyTorch
-face_recognition / dlib
-Streamlit (for UI)
-🧠 Models & Algorithms
-Faster R-CNN → Face Detection
-ResNet → Feature Extraction
-k-Nearest Neighbors (k-NN) → Image Retrieval
-Cosine Similarity → Matching
-Grad-CAM → Explainability
-📁 Project Structure
+---
+
+## 🔄 System Pipeline
+
+1. 📥 Input Image / Webcam
+2. 🧹 Image Preprocessing
+3. 🔍 Face Detection (Faster R-CNN)
+4. ✂️ Face Cropping
+5. 🧠 Feature Extraction (ResNet)
+6. 🧬 Deep Embedding Generation
+7. 🔎 Similarity Matching (k-NN / Cosine Similarity)
+8. 📊 Ranking (Top-K Results)
+9. 🔥 Explainability (Grad-CAM Heatmaps)
+10. ✅ Final Output
+
+---
+
+## 🛠️ Tech Stack
+
+### 💻 Programming Language
+
+* Python
+
+### 📚 Libraries & Frameworks
+
+* OpenCV
+* NumPy
+* TensorFlow / PyTorch
+* face_recognition / dlib
+* Streamlit
+
+### 🧠 Models & Algorithms
+
+* Faster R-CNN → Face Detection
+* ResNet → Feature Extraction
+* k-Nearest Neighbors (k-NN) → Image Retrieval
+* Cosine Similarity → Matching
+* Grad-CAM → Explainability
+
+---
+
+## 📁 Project Structure
+
 FaceIQ/
 │
-├── backend/              # Core logic (detection, recognition)
+├── backend/              # Core logic (face detection, recognition)
 ├── utils/                # Helper functions
-├── build_database.py     # Generate face embeddings database
+├── build_database.py     # Script to create embeddings database
 ├── test.jpeg             # Sample test image
 ├── requirements.txt
 └── README.md
-⚙️ Installation
-1️⃣ Clone Repository
+
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Clone Repository
+
 git clone https://github.com/kaarthika13/FaceIq.git
 cd FaceIq
-2️⃣ Install Dependencies
+
+### 2️⃣ Install Dependencies
+
 pip install -r requirements.txt
-▶️ Usage
-📌 Step 1: Build Database
+
+---
+
+## ▶️ Usage
+
+### 📌 Step 1: Build Face Database
+
 python build_database.py
-📌 Step 2: Run Recognition System
+
+### 📌 Step 2: Run the System
+
 python main.py
-📌 Step 3: Input
-Upload image OR use webcam
-🔍 How It Works
-The system first detects faces using Faster R-CNN
-Extracts facial features using ResNet
-Converts faces into high-dimensional embeddings
-Uses k-NN + cosine similarity to retrieve similar faces
-Applies Grad-CAM to highlight important facial regions
 
-📌 This hybrid approach improves accuracy, scalability, and interpretability compared to traditional methods
+### 📌 Step 3: Provide Input
 
-📊 Performance
-Achieves strong performance in:
-Accuracy
-Precision
-Recall
-F1-Score
-Outperforms traditional systems by:
-Combining multiple modules
-Using deep embeddings instead of low-level features
-🔐 Applications
-🎓 Smart Attendance Systems
-🔐 Biometric Authentication
-🛡️ Surveillance Systems
-📱 Social Media Face Tagging
-🔍 Image Search Engines
-⚠️ Limitations
-High computational cost (GPU preferred)
-Performance depends on dataset quality
-Limited handling of extreme occlusions
-Not fully optimized for real-time large-scale deployment
-🚧 Future Enhancements
-⚡ Real-time video processing
-📱 Mobile deployment
-🔎 Integration with FAISS for faster retrieval
-🌐 Full-stack web application
-🧠 Advanced models (Vision Transformers)
-🤝 Contributors
-Kaarthika Manchirala
-J. Lachiram
-M. Varun Sai
+* Upload image OR
+* Use webcam
 
-📜 License
+---
 
-This project is for academic and educational purposes.
-⭐ Support
+## 🔍 How It Works
 
-If you found this useful, give it a ⭐ on GitHub!
+* Faces are detected using Faster R-CNN
+* Features are extracted using ResNet
+* Faces are converted into embeddings
+* Similarity is computed using k-NN and cosine similarity
+* Grad-CAM highlights important facial regions
+
+---
+
+## 📊 Performance
+
+* High accuracy, precision, recall, and F1-score
+* Better than traditional methods due to:
+
+  * Hybrid architecture
+  * Deep feature embeddings
+  * Explainable AI integration
+
+---
+
+## 🔐 Applications
+
+* Smart Attendance Systems
+* Biometric Authentication
+* Surveillance Systems
+* Social Media Face Tagging
+* Image Search Engines
+
+---
+
+## ⚠️ Limitations
+
+* Requires high computational power (GPU preferred)
+* Depends on dataset quality
+* Limited handling of extreme occlusions
+* Not fully optimized for real-time large-scale deployment
+
+---
+
+## 🚧 Future Enhancements
+
+* Real-time video processing
+* Mobile application support
+* Faster retrieval using FAISS
+* Full-stack web deployment
+* Advanced models (Vision Transformers)
+
+---
+
+## 🤝 Contributors
+
+* Kaarthika Manchirala
+* J. Lachiram
+* M. Varun Sai
+
+Supervisor: Ms. Chinta Anusha
+
+---
+
+## 📜 License
+
+This project is developed for academic purposes.
+
+---
+
+## ⭐ Support
+
+If you found this project useful, give it a ⭐ on GitHub!
